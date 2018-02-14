@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "88846390451",
+    "firebase_url": "https://books-cb60b.firebaseio.com",
+    "project_id": "books-cb60b",
+    "storage_bucket": "books-cb60b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88846390451:android:61d9df7f080bf3cd",
+        "android_client_info": {
+          "package_name": "lior.books"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88846390451-fo0ua6c7u30otpcphserrj291q3q55jc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnabVlPmtx8uUM9YNqQDEyA-syk1MagWs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
