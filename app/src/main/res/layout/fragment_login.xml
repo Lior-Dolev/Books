@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="lior.books.Signup"
+    tools:context="lior.books.UserAuthentication.LoginFragment"
     android:background="@drawable/blue">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +20,7 @@
             android:scaleType="fitXY"/>
 
         <EditText
-            android:id="@+id/signup_email"
+            android:id="@+id/login_email"
             android:background="@drawable/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -31,7 +30,7 @@
             android:hint="Email"/>
 
         <EditText
-            android:id="@+id/signup_password"
+            android:id="@+id/login_password"
             android:background="@drawable/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,27 +41,26 @@
             android:hint="Password"/>
 
         <Button
-            android:id="@+id/signup_createaccount"
+            android:id="@+id/login_loginbutton"
             android:background="@drawable/buttonstyle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:text="CREATE ACCOUNT"
+            android:text="Login"
             android:textColor="#fff"
             android:textStyle="bold"
             />
 
-        <TextView android:id="@+id/signup_login"
+        <TextView android:id="@+id/login_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="24dp"
-            android:text="Already a member? Login"
+            android:text="No account yet? Create one"
             android:gravity="center"
             android:textSize="16dip"
             android:textColor="#fff"
             android:textStyle="bold"/>
 
     </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+</FrameLayout>

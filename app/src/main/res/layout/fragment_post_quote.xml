@@ -1,0 +1,90 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lior.books.Post.PostQuoteFragment"
+    android:background="#e3e5e8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="50dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/post_bookname"
+                android:background="@drawable/edittextstyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp"
+                android:hint="Book Name"/>
+
+
+            <EditText
+                android:id="@+id/post_author"
+                android:background="@drawable/edittextstyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:hint="Author"/>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/post_qoute"
+            android:background="@drawable/edittextstyle"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:hint="qoute..."
+            android:gravity="top|left"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cameraicon"
+                android:scaleType="fitCenter"
+                android:background="#e3e5e8"
+                />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/galleryicon"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="10dp"
+                android:background="#e3e5e8"
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/post_post"
+            android:background="@drawable/buttonstyle"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Post"
+            android:textColor="#fff"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</FrameLayout>
