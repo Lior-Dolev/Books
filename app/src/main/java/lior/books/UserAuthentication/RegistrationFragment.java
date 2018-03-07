@@ -68,11 +68,10 @@ public class RegistrationFragment extends Fragment {
                                 public void onChanged(@Nullable String userID) {
 
                                     if(userID ==  null || userID.isEmpty()) {
-                                        Log.d("TAG", "null");
+
                                         mListener.OnAccountCreationFailure();
                                     }
                                     else {
-                                        Log.d("TAG", userID);
                                         mListener.OnAccountCreated(userID);
                                     }
                                 }

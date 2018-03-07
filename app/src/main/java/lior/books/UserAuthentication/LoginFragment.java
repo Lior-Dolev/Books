@@ -105,7 +105,6 @@ public class LoginFragment extends Fragment {
         }
 
         loginViewModel = new ViewModelProviders().of(this).get(LoginViewModel.class);
-
     }
 
     @Override
