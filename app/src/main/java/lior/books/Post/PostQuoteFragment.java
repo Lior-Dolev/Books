@@ -1,23 +1,18 @@
 package lior.books.Post;
 
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
-import java.util.List;
 
 import lior.books.Post.Model.PostQuote;
 import lior.books.R;
@@ -84,13 +79,14 @@ public class PostQuoteFragment extends Fragment {
             }
         });
 
-        imageView = view.findViewById(R.id.post_camera);
-        imageView.setOnClickListener(new View.OnClickListener() {
+        ImageView camera = view.findViewById(R.id.post_camera);
+        camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dispatchTakePictureIntent();
             }
         });
+        imageView = new ImageView(getContext());
 
         return view;
     }
