@@ -21,9 +21,6 @@ public class FeedViewModel extends ViewModel {
         super();
 
         posts = PostQuoteRepository.instance.getAllPosts();
-        if(posts != null && posts.getValue() != null) {
-            Log.d("TAG", "VIEW MODEL POSTS SIZE" + posts.getValue().size());
-        }
     }
 
     public void getImage(String url, PostQuoteRepository.GetImageListener listener) {

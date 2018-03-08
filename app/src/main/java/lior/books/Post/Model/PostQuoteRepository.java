@@ -152,21 +152,19 @@ public class PostQuoteRepository {
         Bitmap image = PostQuote.loadImageFromFile(fileName);
 
         if (image != null){
-            Log.d("TAG","getImage from local success " + fileName);
             listener.onSuccess(image);
         }else {
             PostQuoteFirebase.getImage(url, new GetImageListener() {
                 @Override
                 public void onSuccess(Bitmap image) {
                     String fileName = URLUtil.guessFileName(url, null, null);
-                    Log.d("TAG","getImage from FB success " + fileName);
+
                     saveImageToFile(image,fileName);
                     listener.onSuccess(image);
                 }
 
                 @Override
                 public void onFail() {
-                    Log.d("TAG","getImage from FB fail ");
                     listener.onFail();
                 }
             });
@@ -194,7 +192,7 @@ public class PostQuoteRepository {
 
                 @Override
                 public void fail() {
-                    Log.d("TAG", "Failed to save image on disk");
+
                 }
             });
         }

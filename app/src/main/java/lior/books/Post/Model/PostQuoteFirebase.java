@@ -66,11 +66,10 @@ public class PostQuoteFirebase {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 List<PostQuote> list = new LinkedList<>();
-                Log.d("TAG", "DATA CHANGED");
+
                 for (DataSnapshot snap : dataSnapshot.getChildren()) {
                     PostQuote post = snap.getValue(PostQuote.class);
                     list.add(post);
-                    Log.d("TAG", "postid: " + post.ID);
                 }
 
                 callback.onComplete(list);

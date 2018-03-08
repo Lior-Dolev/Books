@@ -96,8 +96,7 @@ public class FeedFragment extends Fragment {
         feedViewModel.getPosts().observe(this, new Observer<List<PostQuote>>() {
             @Override
             public void onChanged(@Nullable List<PostQuote> posts) {
-                Log.d("TAG", "list updated");
-                Log.d("TAG", String.valueOf(posts.size()));
+
                 data = posts;
                 if (adapter != null) {
                     adapter.notifyDataSetChanged();
@@ -136,7 +135,7 @@ public class FeedFragment extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            Log.d("TAG", "GET VIEW");
+
             if (convertView == null){
                 convertView = inflater.inflate(R.layout.post_row,null);
             }
@@ -153,12 +152,6 @@ public class FeedFragment extends Fragment {
             bookName.setText(post.BookName);
             author.setText(post.Author);
 
-            if(post.ImageURL != null) {
-                Log.d("TAG", post.ImageURL);
-            } else {
-                Log.d("TAG", "NO URL");
-            }
-
             imageView.setTag(post.ImageURL);
 
             imageView.setImageDrawable(getDrawable(getContext(), R.drawable.cameraicon));
@@ -168,9 +161,6 @@ public class FeedFragment extends Fragment {
                 feedViewModel.getImage(post.ImageURL, new PostQuoteRepository.GetImageListener() {
                     @Override
                     public void onSuccess(Bitmap image) {
-                        Log.d("TAG", "IMAGE SUCCESS");
-                        Log.d("TAG", imageView.getTag().toString());
-                        Log.d("TAG", post.ImageURL);
                         String tagUrl = imageView.getTag().toString();
                         if (tagUrl.equals(post.ImageURL)) {
                             imageView.setImageBitmap(image);
