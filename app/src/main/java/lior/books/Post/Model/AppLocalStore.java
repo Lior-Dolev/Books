@@ -11,7 +11,7 @@ import lior.books.MyApplication;
  */
 
 
-@Database(entities = {PostQuote.class}, version = 1)
+@Database(entities = {PostQuote.class}, version = 2)
 abstract class AppLocalStoreDb extends RoomDatabase {
     public abstract PostQuoteDao postDao();
 }
@@ -19,5 +19,5 @@ abstract class AppLocalStoreDb extends RoomDatabase {
 public class AppLocalStore{
     static public AppLocalStoreDb db = Room.databaseBuilder(MyApplication.getMyContext(),
             AppLocalStoreDb.class,
-            "database-name").build();
+            "database-name").fallbackToDestructiveMigration().build();
 }

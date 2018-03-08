@@ -8,6 +8,7 @@ import android.widget.Toast;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentTransaction;
 
+import lior.books.Post.FeedActivity;
 import lior.books.Post.PostQuoteActivity;
 import lior.books.R;
 
@@ -27,7 +28,7 @@ public class LoginActivity extends AppCompatActivity implements LoginFragment.On
 
     @Override
     public void OnSuccessfulLogin(String userID) {
-        final Intent feed = new Intent(this, PostQuoteActivity.class);
+        final Intent feed = new Intent(this, FeedActivity.class);
         feed.putExtra("userID", userID);
         startActivity(feed);
     }

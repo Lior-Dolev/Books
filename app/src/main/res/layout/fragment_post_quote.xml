@@ -60,19 +60,11 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:id="@+id/post_camera"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/cameraicon"
                 android:scaleType="fitCenter"
-                android:background="#e3e5e8"
-                />
-
-            <ImageButton
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/galleryicon"
-                android:scaleType="fitCenter"
-                android:layout_marginLeft="10dp"
                 android:background="#e3e5e8"
                 />
         </LinearLayout>

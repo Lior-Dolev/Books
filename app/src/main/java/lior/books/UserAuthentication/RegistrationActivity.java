@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentTransaction;
 
+import lior.books.Post.FeedActivity;
 import lior.books.Post.PostQuoteActivity;
 import lior.books.R;
 
@@ -36,7 +37,7 @@ public class RegistrationActivity extends AppCompatActivity implements Registrat
     @Override
     public void OnAccountCreated(String userID) {
 
-        final Intent feed = new Intent(this, PostQuoteActivity.class);
+        final Intent feed = new Intent(this, FeedActivity.class);
         feed.putExtra("userID", userID);
         startActivity(feed);
     }

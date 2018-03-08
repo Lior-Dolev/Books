@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/post_row_quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="quote"
+        android:textSize="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/post_row_bookname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="book name"
+        android:textSize="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Author:"/>
+        <TextView
+            android:id="@+id/post_row_author"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="wrewrtewrt"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <ImageView
+            android:id="@+id/post_row_image"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/cameraicon"
+            android:scaleType="fitCenter"/>
+
+        <ProgressBar
+            android:id="@+id/post_row_progressBar"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="70dp"
+            android:visibility="gone"
+            android:layout_height="70dp" />
+    </FrameLayout>
+
+
+</LinearLayout>
