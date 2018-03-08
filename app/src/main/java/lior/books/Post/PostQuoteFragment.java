@@ -56,15 +56,6 @@ public class PostQuoteFragment extends Fragment {
         }
 
         postQuoteViewModel = new ViewModelProviders().of(this, new PostQuoteViewModelFactory(this.mUserID)).get(PostQuoteViewModel.class);
-
-        postQuoteViewModel.getPosts().observe(this, new Observer<List<PostQuote>>() {
-            @Override
-            public void onChanged(@Nullable List<PostQuote> posts) {
-                Log.d("TAG", "list updated");
-//                employeesList = employees;
-//                if (adapter != null) adapter.notifyDataSetChanged();
-            }
-        });
     }
 
     @Override
@@ -89,6 +80,7 @@ public class PostQuoteFragment extends Fragment {
                 post.LaseUpdated = Utilities.GetDateAsFloat();
 
                 postQuoteViewModel.addPost(post, mUserID, imageBitmap);
+                mListener.OnPostAdded();
             }
         });
 
@@ -141,6 +133,6 @@ public class PostQuoteFragment extends Fragment {
     }
 
     public interface OnPostQuoteInteractionListener {
-
+        void OnPostAdded();
     }
 }

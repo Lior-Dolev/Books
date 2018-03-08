@@ -23,4 +23,9 @@ public class PostQuoteActivity extends AppCompatActivity implements PostQuoteFra
         tran.add(R.id.post_container, postFragment);
         tran.commit();
     }
+
+    @Override
+    public void OnPostAdded() {
+        finish();
+    }
 }
